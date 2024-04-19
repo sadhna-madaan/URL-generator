@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #input-area {
+        text-align: center;
+        padding-top: 30px;
+    }
+
+    #box1,
+    #box2,
+    #box3,
+    #key1,
+    #key2,
+    #key3 {
+        max-width: 44%;
+        width: 100%;
+        padding: 8px 3px;
+    }
+
+    .btn {
+        padding: 8px 17px;
+        cursor: pointer;
+        background: #000;
+        color: #fff;
+
+        border-radius: 4px;
+    }
+
+    .pd {
+        padding-top: 20px
+    }
+</style>
+
+<body>
+    <div id="input-area">
+        <div class="pd">
+            <label>Key 1:</label>
+            <input type="text" id="key1">
+        </div>
+        <div class="pd">
+            <label>Value 1:</label>
+            <input type="text" id="box1">
+        </div>
+
+        <div class="pd">
+            <label>Key 2:</label>
+            <input type="text" id="key2">
+        </div>
+        <div class="pd">
+            <label>Value 2:</label>
+            <input type="text" id="box2">
+        </div>
+
+        <div class="pd">
+            <label>Key 3:</label>
+            <input type="text" id="key3">
+        </div>
+        <div class="pd">
+            <label>Value 3:</label>
+            <input type="text" id="box3">
+        </div>
+        <div class="pd">
+            <button type="submit" onclick="myfun()" class="btn">Submit</button>
+        </div>
+    </div>
+
+    <script>
+        function myfun() {
+            let key1 = document.getElementById('key1').value;
+            let key2 = document.getElementById('key2').value;
+            let key3 = document.getElementById('key3').value;
+            let value1 = document.getElementById('box1').value;
+            let value2 = document.getElementById('box2').value;
+            let value3 = document.getElementById('box3').value;
+            let URL = `https://google.com/?${key1}=${value1}&name=${value2}&hun=${value3}`;
+            console.log(URL);
+        }
+
+    </script>
+</body>
+
+</html>
